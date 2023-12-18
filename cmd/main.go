@@ -8,6 +8,8 @@ import (
 func main() {
 	e := echo.New()
 	index := handlers.IndexHandler{}
+	user := handlers.UserHandler{}
 	e.GET("/", index.IndexHandler)
-	e.Logger.Fatal(e.Start(":1323"))
+	e.GET("/user", user.User)
+	e.Logger.Fatal(e.Start(":3000"))
 }

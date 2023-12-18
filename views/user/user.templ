@@ -1,0 +1,11 @@
+package userview
+
+import "strconv"
+
+templ UserDisplay(id int, name string, email string) {
+    <div>
+        <p> ID: {strconv.Itoa(id)} </p>
+        <p> Name: {name} </p>
+        <p> Email: {email} </p>       
+    </div>
+}

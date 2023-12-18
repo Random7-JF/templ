@@ -10,6 +10,6 @@ import (
 type IndexHandler struct{}
 
 func (h IndexHandler) IndexHandler(c echo.Context) error {
-	log.Printf("Handler")
+	log.Printf("Index Handler")
 	return render(c, view.Index("Jon"))
 }
